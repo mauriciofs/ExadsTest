@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<ruleset name="Move">
+	<description>PSR2 Coding Standard.</description>
+	
+	<arg value="ps" />
+	<arg name="report" value="full,summary" />
+	<arg name="extensions" value="php" />
+	<arg name="tab-width" value="4" />
+	<ini name="memory_limit" value="512M" />
+
+    <file>.</file>
+	<rule ref="PSR2" />
+
+	<rule ref="Generic.WhiteSpace.ScopeIndent">
+		<properties>
+			<property name="exact" value="true" />
+			<property name="indent" value="4" />
+		</properties>
+	</rule>
+
+	<!-- Warn about lines longer than 200 chars, and never error. -->
+	<rule ref="Generic.Files.LineLength">
+		<properties>
+			<property name="lineLimit" value="180" />
+			<property name="absoluteLineLimit" value="0" />
+		</properties>
+	</rule>
+
+</ruleset>
